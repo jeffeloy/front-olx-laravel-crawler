@@ -6,16 +6,7 @@ declare module 'styled-components' {
     colors: {
       background: string,
       backgroundContent: string,
-      inputColor: string,
-      red: string,
-      blue: string,
-      green: string,
-
-      blueLight: string,
-
-      textTitle: string,
-      textBody: string,
-      shades: string,
+      textLabel: string
     }
   }
 }

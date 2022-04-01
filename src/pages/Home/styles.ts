@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import light from "../../styles/themes/light";
 
 export const Content = styled.div`
   display: flex;
@@ -6,6 +7,15 @@ export const Content = styled.div`
   width: 100vw;
   height: 100vh;
   background: var(--background);
+`;
+
+export const SwitchTheme = styled.button`
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  height: 2rem;
 `;
 
 export const ContainerImage = styled.div`
@@ -43,6 +53,7 @@ export const Form = styled.form`
   label {
     font-size: 16px;
     margin-bottom: 1rem;
+    color: var(--text-label);
   }
 
   input {
@@ -58,7 +69,7 @@ export const Form = styled.form`
     height: 4rem;
     align-self: center;
     margin-top: 2.5rem;
-    border: 1px solid #E2E2E1;
+    border: 0;
     border-radius: 0.5rem;
     background: #866AE5;
     color: #FFF;
@@ -73,14 +84,6 @@ export const ContainerSelects = styled.div`
   justify-content: space-between;
   margin: 1rem 0;
 
-  /* select {
-    width: 48%;
-    background: #FFF;
-    height: 3rem;
-    border: 1px solid #E2E2E1;
-    border-radius: 0.5rem;
-    padding: 0 0.7rem;
-  } */
   select {
     outline: none;
     background: #FFF;
