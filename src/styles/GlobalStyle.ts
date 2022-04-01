@@ -3,8 +3,9 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyleCss = createGlobalStyle`
 
   :root {
-    --background: #e2e2e2e;
-    --text-tile: #000;
+    --background: #F0F0F5;
+    --background-content: #373743;
+    --text: #000;
   }
 
   * {
