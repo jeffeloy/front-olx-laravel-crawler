@@ -73,13 +73,26 @@ export const ContainerSelects = styled.div`
   justify-content: space-between;
   margin: 1rem 0;
 
-  select {
+  /* select {
     width: 48%;
     background: #FFF;
     height: 3rem;
     border: 1px solid #E2E2E1;
     border-radius: 0.5rem;
     padding: 0 0.7rem;
+  } */
+  select {
+    outline: none;
+    background: #FFF;
+    padding: 0 0.7rem;
+    width: 48%;
+    height: 3rem;
+    border: 1px solid #E2E2E1;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
   }
 `;
 

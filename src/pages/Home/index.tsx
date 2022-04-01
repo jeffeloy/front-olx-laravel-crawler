@@ -1,10 +1,23 @@
-import { ContainerForm, ContainerImage, ContainerSelects, Content, Form, LogoImg } from "./styles";
+import {
+  ContainerForm,
+  ContainerImage,
+  ContainerSelects,
+  Content,
+  Form,
+  LogoImg
+} from "./styles";
 
 import logoImg from "../../assets/home-logo.svg";
 
-function Home() {
+interface HeaderProps {
+  onToggleTheme: () => void;
+}
+
+function Home({ onToggleTheme }: HeaderProps) {
+
   return (
     <Content>
+      <button>Teste</button>
       <ContainerImage>
         <LogoImg src={logoImg} />
       </ContainerImage>
@@ -15,11 +28,13 @@ function Home() {
           <input type="text" placeholder="Ex: Palio Atractive" />
 
           <ContainerSelects>
-            <select name="" id="">
+            <select name="fuel" id="">
+              <option value="">Selecione o combustivel</option>
+              <option value="">Selecione o combustivel</option>
               <option value="">Selecione o combustivel</option>
             </select>
 
-            <select name="" id="">
+            <select name="doors" id="">
               <option value="">Selecione nº portas</option>
             </select>
           </ContainerSelects>
