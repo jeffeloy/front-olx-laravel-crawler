@@ -1,25 +1,36 @@
 import { Container, DetailsCar, InfoCar } from "./styles";
 
-function CardCar() {
+interface CardCarProps {
+  car: {
+    image: string;
+    title: string;
+    price: string;
+    description: string;
+    date: string;
+    time: string;
+    location: string;
+  }
+}
+function CardCar({ car }: CardCarProps) {
   return (
     <Container>
-      <img src="https://img2.icarros.com/dbimg/imgadicionalnoticia/4/105564_1" alt="Foto carro" />
+      <img src={car.image} alt="Foto carro" />
 
       <InfoCar>
         <DetailsCar>
           <div>
-            <span>Palio Atrative</span>
-            <strong>R$20.000</strong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto nihil velit libero quidem corrupti, dicta quis reprehenderit voluptatibus illum, nulla labore doloribus sit minima quo? Excepturi omnis hic eaque?</p>
+            <span>{car.title}</span>
+            <strong>{car.price}</strong>
+            <p>{car.description}</p>
           </div>
 
           <div>
-            <strong>Ontem</strong>
-            <strong>18:30</strong>
+            <strong>{car.date}</strong>
+            <strong>{car.time}</strong>
           </div>
         </DetailsCar>
 
-        <strong>Salvador</strong>
+        <strong>{car.location}</strong>
       </InfoCar>
     </Container>
   );
