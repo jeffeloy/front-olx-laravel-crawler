@@ -1,47 +1,43 @@
-import { CardCar, Container, DetailsCar, InfoCar } from "./styles";
+import Slider from "react-slick";
+import CardCar from "../../components/CardCar/CardCar";
+import { Icon } from "@iconify/react";
+import { ThemeContext } from 'styled-components';
+import arrowRight from "@iconify/icons-mdi/arrow-right-circle";
+import arrowLeft from "@iconify/icons-mdi/arrow-left-circle";
+
+import { Container } from "./styles";
+
 
 function ListCars() {
+  var settings = {
+    dots: true,
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    // centerPadding: "60px",
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    swipeToSlide: true,
+    adaptiveHeight: true,
+    nextArrow: <Icon icon={arrowRight}
+      width={30}
+      height={30}
+      color={'#1B1B21'} />,
+    prevArrow: <Icon icon={arrowLeft}
+      width={30}
+      height={30}
+      color={'#1B1B21'} />,
+  };
+
   return (
     <Container>
-      <CardCar>
-        <img src="https://img2.icarros.com/dbimg/imgadicionalnoticia/4/105564_1" alt="Foto carro" />
-
-        <InfoCar>
-          <DetailsCar>
-            <div>
-              <span>Palio Atrative</span>
-              <strong>R$20.000</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto nihil velit libero quidem corrupti, dicta quis reprehenderit voluptatibus illum, nulla labore doloribus sit minima quo? Excepturi omnis hic eaque?</p>
-            </div>
-
-            <div>
-              <strong>Ontem</strong>
-              <strong>18:30</strong>
-            </div>
-          </DetailsCar>
-
-          <strong>Salvador</strong>
-        </InfoCar>
-      </CardCar>
-      <CardCar>
-        <img src="https://img2.icarros.com/dbimg/imgadicionalnoticia/4/105564_1" alt="Foto carro" />
-
-        <InfoCar>
-          <DetailsCar>
-            <div>
-              <span>Palio Atrative</span>
-              <strong>R$20.000</strong>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto nihil velit libero quidem corrupti, dicta quis reprehenderit voluptatibus illum, nulla labore doloribus sit minima quo? Excepturi omnis hic eaque?</p>
-            </div>
-
-            <div>
-              <strong>Ontem</strong>
-              <strong>18:30</strong>
-            </div>
-          </DetailsCar>
-          <strong>Salvador</strong>
-        </InfoCar>
-      </CardCar>
+      <Slider {...settings} className="slider-center">
+        <CardCar />
+        <CardCar />
+        <CardCar />
+        <CardCar />
+      </Slider>
     </Container>
   );
 }
