@@ -3,8 +3,9 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyleCss = createGlobalStyle`
 
   :root {
-    --background: #e2e2e2e;
-    --text-tile: #000;
+    --background: ${props => props.theme.colors.background};
+    --background-content: ${props => props.theme.colors.backgroundContent};
+    --text-label: ${props => props.theme.colors.textLabel};
   }
 
   * {
@@ -56,6 +57,10 @@ export const GlobalStyleCss = createGlobalStyle`
     font-size: 4rem;
     line-height: 4.70rem;
     letter-spacing: -0.8px;
+  }
+
+  button {
+    cursor: pointer;
   }
 
 `;
