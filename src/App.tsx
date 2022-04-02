@@ -4,6 +4,8 @@ import { GlobalStyleCss } from "./styles/GlobalStyle";
 import { usePersistedstate } from './hooks/usePersistedstate';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   const [theme, setTheme] = usePersistedstate<DefaultTheme>('theme', dark);
@@ -15,7 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyleCss />
-      <Routes onToggleTheme={toggleTheme}/>
+      <Routes onToggleTheme={toggleTheme} />
     </ThemeProvider>
   );
 }

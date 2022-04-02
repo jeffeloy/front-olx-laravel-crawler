@@ -1,20 +1,17 @@
 import { Routes as BrowserRoutes, Route, Link } from "react-router-dom";
-import { DefaultTheme, ThemeProvider } from "styled-components";
-import { usePersistedstate } from '../hooks/usePersistedstate';
-import light from '../styles/themes/light';
-import dark from '../styles/themes/dark';
-
 import Home from "../pages/Home";
+import ListCars from "../pages/ListCars";
 
 interface RoutesProps {
   onToggleTheme: () => void;
 }
 
 
-function Routes({onToggleTheme}: RoutesProps) {
+function Routes({ onToggleTheme }: RoutesProps) {
   return (
     <BrowserRoutes>
       <Route index element={<Home onToggleTheme={onToggleTheme} />} />
+      <Route path="/list-cars" element={<ListCars />} />
     </BrowserRoutes>
   );
 }
