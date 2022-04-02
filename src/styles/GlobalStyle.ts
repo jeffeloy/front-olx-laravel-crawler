@@ -24,7 +24,7 @@ export const GlobalStyleCss = createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: '#F0F0F5';
     --webkit-font-smoothing: antialiased;
   }
 
