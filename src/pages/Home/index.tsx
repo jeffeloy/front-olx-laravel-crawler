@@ -10,8 +10,7 @@ import {
 
 import { Icon } from "@iconify/react";
 import { ThemeContext } from 'styled-components';
-import brightness4 from "@iconify/icons-mdi/brightness-4";
-import brightness7 from "@iconify/icons-mdi/brightness-7";
+import swapHorizontal from "@iconify/icons-mdi/swap-horizontal-bold";
 import logoImg from "../../assets/home-logo.svg";
 import { useContext } from "react";
 
@@ -21,12 +20,12 @@ interface HeaderProps {
 
 function Home({ onToggleTheme }: HeaderProps) {
   const { title } = useContext(ThemeContext);
-  
+
   return (
     <Content>
       <SwitchTheme onClick={onToggleTheme}>
         <Icon
-          icon={title === 'light' ? brightness4 : brightness7}
+          icon={swapHorizontal}
           width={30}
           height={30}
           color={title === 'light' ? '#1B1B21' : '#FCFCFC'}
@@ -44,12 +43,15 @@ function Home({ onToggleTheme }: HeaderProps) {
           <ContainerSelects>
             <select name="fuel" id="">
               <option value="">Selecione o combustivel</option>
-              <option value="">Selecione o combustivel</option>
-              <option value="">Selecione o combustivel</option>
+              <option value="/gasolina">Gasolina</option>
+              <option value="/alcool">Álcool</option>
+              <option value="/gas-natural">Gás Natural</option>
             </select>
 
             <select name="doors" id="">
               <option value="">Selecione nº portas</option>
+              <option value="cad=1">2 Portas</option>
+              <option value="cad=2">4 Portas</option>
             </select>
           </ContainerSelects>
 
