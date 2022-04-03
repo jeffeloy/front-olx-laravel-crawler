@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  width: 60rem;
+  width: 65rem;
   height: 16rem;
   /* padding: 0.5rem; */
   border: 1px solid #DDDDE3;
@@ -13,9 +13,10 @@ export const Container = styled.div`
   margin-bottom: 1rem;
 
   img {
-    width: 30%;
+    width: 40%;
+    max-width: 329px;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 1rem 0 0 1rem;
   }
 `;
