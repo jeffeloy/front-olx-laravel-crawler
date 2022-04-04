@@ -5,8 +5,8 @@ export const Container = styled.div`
   height: 100%;
   background: #FFFFFF;
   margin-inline: auto;
-  margin-top: 5% !important;
-  padding: 1rem 0;
+  margin-top: 10% !important;
+  padding: 3rem 0;
 
   .slick-slide{
     display: grid;
@@ -41,19 +41,28 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   background: #373743;
   overflow: hidden;
   position: fixed;
   top: 0; 
-  padding: 0 1rem;
+  padding: 3rem 1rem;
 
+  .container-img {
+    margin-top: -3rem;
+    width: 200px;
+    height: 200px;
+  }
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
   }
 
   h1 {
-    color: #917EDD;
+    color: #6956BC;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
   }
 `;

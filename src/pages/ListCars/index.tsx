@@ -1,10 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import CardCar from "../../components/CardCar/CardCar";
 import { Icon } from "@iconify/react";
 import logoImg from "../../assets/header-logo.svg";
 import arrowDown from "@iconify/icons-mdi/arrow-down-circle";
 import arrowUp from "@iconify/icons-mdi/arrow-up-circle";
+import exit from "@iconify/icons-mdi/exit-to-app";
 
 import { Container, Header } from "./styles";
 
@@ -19,15 +20,16 @@ interface Car {
 }
 
 function ListCars() {
-  const location = useLocation();
+  const location: any = useLocation();
+  const navigate = useNavigate();
   const cars: Car[] = location.state.cars;
 
   var settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     vertical: true,
     verticalSwiping: true,
     nextArrow:
@@ -44,11 +46,24 @@ function ListCars() {
       />,
   };
 
+  function goBack() {
+    navigate('/')
+  }
+
   return (
     <>
       <Header>
-        <img src={logoImg} alt="Logo" />
+        <div className="container-img">
+          <img src={logoImg} alt="Logo" />
+        </div>
         <h1>One Search</h1>
+        <button onClick={goBack}>
+          <Icon icon={exit}
+            width={40}
+            height={40}
+            color={'#FFF'}
+          />
+        </button>
       </Header>
       <Container>
         {cars.length > 0 ? (

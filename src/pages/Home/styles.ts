@@ -41,7 +41,7 @@ export const ContainerForm = styled.div`
   height: 100%;
 
   h1 {
-    color: #7A63D6;
+    color: #6956BC;
   }
 `;
 
@@ -71,7 +71,7 @@ export const Form = styled.form`
     margin-top: 2.5rem;
     border: 0;
     border-radius: 0.5rem;
-    background: #866AE5;
+    background: #6956BC;
     color: #FFF;
     font-size: 18px;
     font-weight: 500;
