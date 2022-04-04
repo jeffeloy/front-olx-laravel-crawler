@@ -25,8 +25,8 @@ function CardCar({ car }: CardCarProps) {
           </div>
 
           <div>
-            <strong>{car.date}</strong>
-            <strong>{car.time}</strong>
+            <strong>{car.date.split(',')[0]}</strong>
+            <strong>{car.time.split(',')[1]}</strong>
           </div>
         </DetailsCar>
 
